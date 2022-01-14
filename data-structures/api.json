@@ -1,0 +1,29 @@
+
+// Entire Request will be concerted to base64 after individual params's data's conversion to Base64
+request : {
+  name : string, // Request Name, getData() function would search the name
+  requestedAt : int,
+  params : [
+    {
+      key : string,  // Param Key / Name
+      value : Blob | File | string | int | base64, // will be converted to Blob an d then Base64 string
+      mimeType : string,  // value's MimeType      
+    }
+  ]
+}
+
+// Response is always a base64 string. NEed to convert it to Blob and then text to get the below details
+response : {
+  name : string,
+  requestedAt : int, 
+  responseTime : int,
+  size : int, 
+  data : [
+    {
+      key : string,
+      value : base64Str, // response is always received in base64 format. Needs to be converted to Blob / Text / Json according to the MimeType
+      mimeType : string
+    }
+  ]
+  
+}
