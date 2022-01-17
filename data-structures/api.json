@@ -4,11 +4,7 @@ request : {
   name : string, // Request Name, getData() function would search the name
   requestedAt : int,
   params : [
-    {
-      key : string,  // Param Key / Name
-      value : Blob | File | string | int | base64, // will be converted to Blob an d then Base64 string
-      type : string,  // value's MimeType      
-    }
+    Data, Data ...
   ]
 }
 
@@ -19,11 +15,7 @@ response : {
   responseTime : int,
   size : int, 
   data : [
-    {
-      key : string,
-      value : base64Str, // response is always received in base64 format. Needs to be converted to Blob / Text / Json according to the MimeType
-      type : string  // value's MimeType  
-    }
+    Data, Data
   ]
   
 }
