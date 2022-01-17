@@ -1,0 +1,16 @@
+Data : {
+  fieldName : string,
+  fieldType : string,
+  fieldCaption : string,
+  fieldDescription : string,
+  value : any,
+  valueType : Base64 | Blob | Text | JSON | Number | Boolean
+  url : string,  
+  async asBlob() : Blob,
+  async asText() : string,
+  async asBase64() : string,
+  async asJson() : Object,
+  async asNumber() : int,
+  async asBoolean() : boolean,  
+}
+
