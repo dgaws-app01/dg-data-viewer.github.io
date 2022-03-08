@@ -6,6 +6,6 @@ onmessage = function(e) {
     var a = 9, b = 10
     var c = a + b
   }
-  postMessage(123456)   
+  postMessage(654321)   
   //postMessage(workerResult);
 }
